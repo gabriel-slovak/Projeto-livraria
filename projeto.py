@@ -44,6 +44,7 @@ with app.app_context():
     db.create_all()
 
     livros_terror = [
+    
     Terror(titulo_terror="It", autor_terror="Stephen King",
            capa_terror="https://upload.wikimedia.org/wikipedia/pt/8/82/It_2017.jpg", favorito=False),
     Terror(titulo_terror="O Iluminado", autor_terror="Stephen King",
@@ -55,10 +56,12 @@ with app.app_context():
     db.session.commit()
 
     livros_fantasia = [
+       
         Fantasia(titulo_fantasia="O Labirinto do Fauno", autor_fantasia="Guillermo del Toro", capa_fantasia="https://m.media-amazon.com/images/I/51epGsQvSaL._SY445_SX342_.jpg", favorito=False),
         Fantasia(titulo_fantasia="O Senhor dos Anéis", autor_fantasia="J.R.R. Tolkien", capa_fantasia="https://m.media-amazon.com/images/I/71+4uDgt8JL._AC_UF1000,1000_QL80_.jpg", favorito=False),
         Fantasia(titulo_fantasia="Harry Potter e a Pedra Filosofal", autor_fantasia="J.K. Rowling", capa_fantasia="https://m.media-amazon.com/images/I/51UoqRAxwEL.jpg", favorito=False),
     ]
+
     db.session.bulk_save_objects(livros_fantasia)
     db.session.commit()
 
